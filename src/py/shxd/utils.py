@@ -1,4 +1,5 @@
 from typing import Dict, Optional
+import sys
 
 class Colors:
     COLORS: Dict[str, str] = {
@@ -20,5 +21,8 @@ class Colors:
     @classmethod
     def get_color(cls, color_name: str) -> str:
         return cls.COLORS.get(color_name, cls.COLORS['reset'])
+
+def send_warn(message: str, color: Optional[str] = 'yellow') -> None:
+    sys.stdout.write(Colors().yellow + message + Colors().reset + '\n\n') 
 
 colors = Colors()

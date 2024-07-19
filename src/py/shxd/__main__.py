@@ -1,7 +1,7 @@
 import sys
 import argparse
 from .parser import default_parser
-from .utils import colors
+from .utils import colors, send_warn
 
 def main():
 
@@ -12,7 +12,8 @@ def main():
 
     
     if not args.args:
-        sys.stdout.write(colors.yellow + 'No args!' + colors.reset + '\n')
+        send_warn('to use shxd you need to pass commands or arguments.')
+        sys.stdout.write(colors.red + 'No args!' + colors.reset + '\n')
         return
     sys.stdout.write('Arguments received: ' + ' '.join(args.args) + '\n')
 
