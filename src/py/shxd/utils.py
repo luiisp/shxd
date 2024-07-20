@@ -25,4 +25,5 @@ class Colors:
 def send_warn(message: str, color: Optional[str] = 'yellow') -> None:
     sys.stdout.write(Colors().yellow + "WARNING: " + message + Colors().reset + '\n\n') 
 
+
 colors = Colors()

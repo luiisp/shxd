@@ -1,6 +1,8 @@
 from collections import namedtuple
 from typing import Any, Dict, Optional
-
+from .commands import CMD_FUNCS
+from itertools import chain
+from typing import Optional
 
 CommandInfo = namedtuple('CommandInfo', 'name, summary, main_function')
 
@@ -16,7 +18,7 @@ commands: Dict[str, Dict[str, CommandInfo]] = {
         'ping': CommandInfo(
             'ping',
             'Return pong.',
-            'function'
+            CMD_FUNCS['native']['ping']
 
         ),
         'credits': CommandInfo(
@@ -84,5 +86,12 @@ commands: Dict[str, Dict[str, CommandInfo]] = {
 
     }
 }
+
+def find_function(name: str) -> Optional[object]:
+    for cmds_tree in commands.values():
+        for cmd in cmds_tree.values():
+            if cmd.name == name:
+                return cmd.main_function
+    return None
 
 
