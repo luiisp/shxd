@@ -17,14 +17,17 @@ def main():
         args.args.append('')
     
     
-    sys.stdout.write(colors.red + 'No args!' + colors.reset + '\n')
+#    sys.stdout.write(colors.red + 'No args!' + colors.reset + '\n')
 
     
     
  #   sys.stdout.write('Arguments received: ' + ' '.join(args.args) + '\n')
     cmd = find_function(args.args[0])
     if cmd:
-        cmd()
+        if len(args.args) > 1:
+            cmd(*args.args[1:])
+        else:
+            cmd()
     else:
         return sys.stdout.write('Command not found!\n')
 

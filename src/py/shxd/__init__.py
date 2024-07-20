@@ -44,7 +44,7 @@ commands: Dict[str, Dict[str, CommandInfo]] = {
         'clone': CommandInfo(
             'clone',
             'Clone a git repository',
-            'function'
+            CMD_FUNCS['native']['clone']
             ),
         'req': CommandInfo(
             'request',
