@@ -4,7 +4,12 @@ A cli to extend shell functionality for developers.
 
 # Installation
 
-....
+###  🐍 For Python
+
+```bash
+pip install shxd
+```
+
 
 
 ## Contributors

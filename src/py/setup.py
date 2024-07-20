@@ -9,7 +9,12 @@ setup(
             'sx=shxd.__main__:main',
         ],
     },
-    install_requires=[],
+    install_requires=[
+        'requests',
+        'pygments',
+        'colorama',
+        
+    ],
     python_requires='>=3.6',
     author='Pedro Luis Dias',
     author_email='luisp.diias@gmail.com',
