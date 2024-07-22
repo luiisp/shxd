@@ -8,6 +8,13 @@ A cli to extend shell functionality for developers.
 pip install shxd
 ```
 
+# Running in development mode
+
+1. ``` python -m venv venv```
+2. ``` pip install . ```
+3. ``` shxd ping```
+
+
 ## Contributors
 
 
