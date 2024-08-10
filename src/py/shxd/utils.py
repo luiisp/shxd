@@ -11,6 +11,7 @@ class Colors:
         'cyan': '\033[36m',
         'white': '\033[37m',
         'reset': '\033[0m',
+        'bold': '\033[1m',
     }
 
     def __getattr__(self, name: str) -> str:

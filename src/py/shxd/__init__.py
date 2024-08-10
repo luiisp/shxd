@@ -66,25 +66,13 @@ commands: Dict[str, Dict[str, CommandInfo]] = {
             'Install or Update the requirements from a requirements.txt file',
             'function'
         ),
+        'venv': CommandInfo(
+            'venv',
+            'Create/Activate/Deactivate a virtual environment',
+            CMD_FUNCS['native']['venv']
+        ),
     },
-    'venv': {
-        '': CommandInfo(
-            '',
-            'Create a virtual environment',
-            'function'
-        ),
-        'activate': CommandInfo(
-            'activate',
-            'Activate the virtual environment',
-            'function'
-        ),
-        'deactivate': CommandInfo(
-            'deactivate',
-            'Deactivate the virtual environment',
-            'function'
-        ),
 
-    }
 }
 
 def find_function(name: str) -> Optional[object]:
